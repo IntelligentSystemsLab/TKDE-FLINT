@@ -1,7 +1,5 @@
-# FLINT
-A new federated learning framework, FLINT, is proposed to address the dilemmas caused by restricted private data 
-and limited computing power resources in the IoT. It is compatible with general federared learning methods, 
-and acts as an optimizer of these methods to cost-efficiently train required models in various IoT scenarios.
-To be specific, FLINT implements a seminal bi-directional distillation process to guide the updates of 
-client-side compact-scale models based on server-side large-scale models.
- 
+# FLINT: A Federated Mechanism for Sharing Knowledge among Large and Compact Models for Intelligent Services
+## Authors
+Shaoyuan Chen, Zihan Guo, Linlin You, *Senior Member, IEEE*, M´erouane Debbah *Fellow, IEEE*, H. Vincent Poor *Life Fellow, IEEE*, Chau Yuen *Fellow, IEEE*
+## Abstract
+A significant breakthrough has been achieved by large AI models (LMs). However, their adoption on edge devices in the Internet of Things (IoT) remains challenging, especially when both sensitive data is protected and computing power is limited to be used to update or run LMs directly. Even though federated learning (FL) can be applied to train lightweight models for IoT by orchestrating data-isolated and resource-restricted clients, it still requires a method that can transfer the knowledge encoded in LMs to local models running at various IoT clients. To address that, we propose a novel mechanism for FL in enabling knowledge sharing between cloud and edge in a privacy-preserving manner, called FLINT. It implements a bi-directional knowledge distillation process between client-side compact models (CMs) and server-side LMs, through which, CMs carrying local knowledge are, first, aggregated to jointly fine-tune LMs, and then updated based on a meta-gradient distilled from the fine-tuned LMs to elevate their local performance. Experimental results show that FLINT can be seamlessly integrated with general FL methods to improve their model training performance in terms of accuracy and speed by up to 31.6\% and 2.93$\times$, respectively. In addition, FLINT is also adaptable to settings with different numbers of clients and degrees of data heterogeneity, making it a suitable solution for real-world intelligent services.
